@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+
+        }
+
+        .wraper {
+            width: 70%;
+            /* min-width: 944px; */
+            margin: auto;
+            display: flex;
+         
+
+            row-gap: 6px;
+
+            padding: 60px 30px;
+            margin-top: 32px;
+         
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+        }
+
+        .items {
+            padding: 15px 5px;
+            border-radius: 10px;
+            /* width: 288px; */
+            flex-basis: 33%;
+          
+        }
+
+        .item1 {
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            /* flex-grow: 3; */
+          
+          
+        }
+
+        .item2 {
+            background-color: darkorchid;
+            color: white;
+         
+          
+
+
+
+        }
+
+        .item3 {
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        
+          
+
+        }
+
+        .item4 {
+            background-color: #143d59;
+            color: white;
+        
+          
+        }
+
+        .item5 {
+            background-color: #1a1d2ebf;
+            color: #FFEFCE;
+           
+          
+
+        }
+
+        .item6 {
+            background-color: #141414;
+            color: #EBEBEB;
+         
+           
+        }
+
+        .item7 {
+            background-color: #3E3A33;
+            color: #FFFFFF;
+    
+           
+        }
+
+        .item8 {
+            background-color: #0e387a;
+            color: #9fafca;
+          
+      
+        }
+
+        .item9 {
+            background-color: #5F4B8BFF;
+            color: #EEFFD5;
+        
+           
+
+        }
+        
+
+        .image {
+            width: 90px;
+            height: 90px;
+            margin: auto;
+
+            margin-bottom: 1.5rem;
+
+
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 3px solid #e1dbdbfc;
+        }
+
+        h5 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 1rem;
+            font-family: inter;
+            font-weight: bold;
+        }
+
+        p {
+            text-align: center;
+            font-family: inter;
+
+
+        }
+
+        @media screen and (min-width:800px) and (max-width:1200px) {
+            .items
+            {
+                flex-basis: 49%;
+            }
+        }
+        @media screen  and (max-width:799px) {
+            .items
+            {
+                flex-basis: 100%;
+            }
+        }
+        @media screen  and (max-width:568px) {
+            .wraper
+            {
+                width: 100%;
+                padding: 30px 0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wraper">
+        <div class="items item1">
+            <div class="image1 image">
+                <img src="./images/web.jpg" alt="">
+
+            </div>
+            <h5>Web design</h5>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel alias fuga maiores sit sint ex, soluta nemo
+                porro magnam inventore aliquid eos est aperiam! Ducimus odit repellendus libero. Consequuntur, placeat?
+            </p>
+
+
+        </div>
+
+        <div class="items item2">
+            <div class="image2 image">
+                <img src="./images/graphix.jpg" alt="">
+            </div>
+
+            <h5>Graphic design</h5>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel alias fuga maiores sit sint ex, soluta nemo
+                porro magnam inventore aliquid eos est aperiam! Ducimus odit repellendus libero. Consequuntur, placeat?
+            </p>
+        </div>
+
+        <div class="items item3">
+            <div class="image3 image">
+                <img src="./images/email.jpeg" alt="">
+            </div>
+
+            <h5>Email Marketing</h5>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel alias fuga maiores sit sint ex, soluta nemo
+                porro magnam inventore aliquid eos est aperiam! Ducimus odit repellendus libero. Consequuntur, placeat?
+            </p>
+        </div>
+
+        <div class="items item4">
+            <div class="image1 image">
+                <img src="./images/web.jpg" alt="">
+
+            </div>
+            <h5>Web Development</h5>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel alias fuga maiores sit sint ex, soluta nemo
+                porro magnam inventore aliquid eos est aperiam! Ducimus odit repellendus libero. Consequuntur, placeat?
+            </p>
+
+
+        </div>
+
+        <div class="items item5">
+            <div class="image1 image">
+                <img src="./images/web.jpg" alt="">
+
+            </div>
+            <h5>Mern stack</h5>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel alias fuga maiores sit sint ex, soluta nemo
+                porro magnam inventore aliquid eos est aperiam! Ducimus odit repellendus libero. Consequuntur, placeat?
+            </p>
+
+
+        </div>
+
+        <div class="items item6">
+            <div class="image1 image">
+                <img src="./images/web.jpg" alt="">
+
+            </div>
+            <h5>Mean stack</h5>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel alias fuga maiores sit sint ex, soluta nemo
+                porro magnam inventore aliquid eos est aperiam! Ducimus odit repellendus libero. Consequuntur, placeat?
+            </p>
+
+
+        </div>
+
+        <div class="items item7">
+            <div class="image1 image">
+                <img src="./images/web.jpg" alt="">
+
+            </div>
+            <h5>React Developer</h5>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel alias fuga maiores sit sint ex, soluta nemo
+                porro magnam inventore aliquid eos est aperiam! Ducimus odit repellendus libero. Consequuntur, placeat?
+            </p>
+
+
+        </div>
+
+        <div class="items item8">
+            <div class="image1 image">
+                <img src="./images/web.jpg" alt="">
+
+            </div>
+            <h5>Nodejs Developer</h5>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel alias fuga maiores sit sint ex, soluta nemo
+                porro magnam inventore aliquid eos est aperiam! Ducimus odit repellendus libero. Consequuntur, placeat?
+            </p>
+
+
+        </div>
+
+        <div class="items item9">
+            <div class="image1 image">
+                <img src="./images/web.jpg" alt="">
+
+            </div>
+            <h5>.Net Developer</h5>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel alias fuga maiores sit sint ex, soluta nemo
+                porro magnam inventore aliquid eos est aperiam! Ducimus odit repellendus libero. Consequuntur, placeat?
+            </p>
+
+
+        </div>
+        
+      
+    </div>
+
+
+
+    <div class="container">
+        <div class="row"></div>
+    </div>
+
+</body>
+
+</html>

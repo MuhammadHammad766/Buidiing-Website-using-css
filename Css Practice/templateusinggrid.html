@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body
+        {
+            font-family: arial;
+            display: grid;
+            grid-template-areas:
+            'header header'
+            'section section'
+            'content  aside'
+            'footer aside'
+            ;
+           grid-template-columns:4fr 1fr;
+           grid-template-rows:auto 450px auto auto
+
+
+        }
+        header,section,main,footer,aside
+        {
+            border:1px solid black;
+            padding: 10px 0px;
+        }
+        header
+        {
+            grid-area: header;
+        }
+        section
+        {
+            grid-area: section;
+        }
+        main
+        {
+            grid-area: content;
+        }
+        aside
+        {
+            grid-area: aside;
+        }
+        footer
+        {
+            grid-area: footer;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>Header</header>
+    <section>Image</section>
+    <main>Content</main>
+    <aside>sidebar</aside>
+    <footer>footer</footer>
+    
+</body>
+</html>

@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/faf7708005.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: inter;
+        }
+
+        header {
+            display: flex;
+            flex-direction: column;
+            height: 525px;
+            background-image: url('images/background-image_of_bike.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50% 50%;
+            row-gap: 4.5rem;
+            min-height: 100%;
+
+            justify-content: center;
+
+        }
+
+        header #navbarforsmalldevice {
+
+            display: none;
+        }
+
+
+
+
+        #header {
+            background-color: #3c483cb3;
+            background-blend-mode: hue;
+            display: flex;
+            padding: 10px 5px;
+            justify-content: space-between;
+            position: sticky;
+            top: 0px;
+            z-index: 1;
+            background-image: url('images/background-image_of_bike.jpg');
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            align-items: center;
+
+
+
+        }
+
+        #login button {
+            padding: 7px 20px;
+            background: #505050;
+            color: white;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+
+        /* #header::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 54px;
+            background-color: hsl(0deg 0% 15%);
+            z-index: -1;
+            opacity: 0.8;
+            border-bottom: 1px;
+            border: 1px solid hsl(0deg 0% 20%);
+            left: 0px;
+        } */
+
+
+
+        #header ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+
+
+
+
+        #header a:hover {
+            color: rgb(190, 190, 190);
+            background-color: #3c483cb3;
+        }
+
+        #header #logo input {
+            width: 530px;
+            padding: 8px 5px;
+            background-color: hsl(0deg 0% 24%);
+            color: white;
+            border-radius: 4px;
+            opacity: 0.9;
+            border: none;
+        }
+
+
+
+
+        #header #logo input::placeholder {
+            color: rgb(226, 221, 221);
+        }
+
+        #header #logo input:focus {
+            outline: none;
+        }
+
+        #header #logo button {
+            padding: 8px 25px;
+            background-color: hsl(120deg 1% 30%);
+            border: none;
+            color: hsl(0deg 0% 100%);
+            cursor: pointer;
+            border-radius: 4px;
+            font-weight: 600;
+
+        }
+
+
+
+        #header a {
+            text-decoration: none;
+            padding: 10px 10px;
+            color: white;
+            display: block;
+        }
+
+
+        .displayheadercontentflex {
+            padding: 0px 16px;
+            font-size: 4.5rem;
+            font-weight: 600;
+            color: white;
+            width: 600px;
+            flex-direction: column;
+            align-items: flex-start;
+            /* text-align: center; */
+            /* border:1px solid black; */
+
+            display: flex;
+            animation: headercontent 2s ease-in 2.2s forwards;
+            /* border: 1px solid black; */
+
+        }
+
+        @keyframes headercontent {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+
+
+
+        }
+
+
+        #headercontent button {
+            padding: 12px 35px;
+            background: #f44336;
+            color: white;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .displaynoneclass {
+            display: none;
+        }
+
+        #contentsectionndsidebar {
+            display: flex;
+            justify-content: center;
+
+        }
+
+
+        #contentsection {
+            display: flex;
+            width: 1168px;
+            max-width: 100%;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            row-gap: 8px;
+            margin-bottom: 1.5rem;
+            margin-top: 1.5rem;
+
+
+        }
+
+        .section {
+            width: 32%;
+            height: auto;
+            box-shadow: 0px 0px 10px;
+            /* padding: 1px 8px; */
+            cursor: pointer;
+            transition-property: all;
+            transition-duration: 2s;
+            transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+            transition-delay: 0.5s;
+
+
+        }
+
+        .section:hover {
+            transform: scale(1.1, 1.1);
+
+        }
+
+        .image h3 {
+            color: white;
+            visibility: hidden;
+
+
+        }
+
+        .section:hover .image {
+            background-color: #524f4f;
+            background-blend-mode: overlay;
+            /* animation: image 2s ease-in-out 1s forwards; */
+
+
+
+
+
+        }
+
+        /* @keyframes image {
+            100% {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+        } */
+
+        .section:hover .image h3 {
+
+            animation: heading 1s ease-in 0.8s forwards;
+
+
+        }
+
+        @keyframes heading {
+            0% {}
+
+            100% {
+                visibility: visible;
+                transform: translate(130px, 80px) rotate(360deg);
+
+
+
+            }
+
+        }
+
+        .image {
+
+            display: flex;
+            align-items: flex-start;
+        }
+
+
+
+
+
+        #image1 {
+            width: 100%;
+            height: 200px;
+            background-image: url('./images/adventure.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50% 50%;
+
+        }
+
+
+        #image2 {
+            width: 100%;
+            height: 200px;
+            background-image: url('./images/yamaha_mt07_naked_bike.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50% 50%;
+
+        }
+
+        #image3 {
+            width: 100%;
+            height: 200px;
+            background-image: url('./images/fireblade_rrr_sportsbike.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50% 50%;
+
+        }
+
+        #image4 {
+            width: 100%;
+            height: 200px;
+            background-image: url('./images/bmw_r1250rt_tourer.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50% 50%;
+
+        }
+
+        #image5 {
+            width: 100%;
+            height: 200px;
+            background-image: url('./images/kawasaki_ninja_1000sx_sports_tourer.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50% 50%;
+
+        }
+
+        #image6 {
+            width: 100%;
+            height: 200px;
+            background-image: url('./images/honda_crf450l_dual_sport_bike.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50% 50%;
+
+        }
+
+        #image7 {
+            width: 100%;
+            height: 200px;
+            background-image: url('./images/triumph_t120_classic_bike.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50% 50%;
+
+        }
+
+        #image8 {
+            width: 100%;
+            height: 200px;
+            background-image: url('./images/ktm_450_sxf_factory_offroad_bike.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50% 50%;
+
+        }
+
+        #image9 {
+            width: 100%;
+            height: 200px;
+            background-image: url('./images/honda_pcx125_scooter.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50% 50%;
+
+        }
+
+        .fordescription {
+            box-shadow: 0px 0px 5px;
+            padding: 4px 8px;
+            border-radius: 2px;
+
+        }
+
+        #footersection {
+            background-color: #141515;
+            display: flex;
+            justify-content: center;
+
+
+        }
+
+        #footerinsidemainbox {
+
+            width: 1168px;
+            max-width: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 0.5rem;
+            margin-top: 0.5rem;
+
+        }
+
+        .sectionfooter {
+            width: 32%;
+            color: white;
+            font-weight: 200;
+            padding: 15px 10px;
+        }
+
+
+
+
+        #aboutusection h3,
+        #contactus h3,
+        #icons h3 {
+            margin-bottom: 0.8rem;
+        }
+
+
+
+
+        #contactus ul {
+            list-style: none;
+        }
+
+        #contactus ul li {
+            padding: 5px 0px;
+        }
+
+
+
+        #icons ul {
+            display: flex;
+            list-style: none;
+            column-gap: 4px;
+        }
+
+        #icons ul li {
+            padding: 5px 15px;
+            background-color: hsl(0deg 0% 10%);
+            border-radius: 4px;
+            cursor: pointer;
+
+        }
+
+
+        #smallmenu {
+            width: 100%;
+            border-top: 2px solid hsl(0deg 0% 10%);
+            ;
+        }
+
+        #smallmenu ul {
+            list-style: none;
+            display: flex;
+
+        }
+
+        #smallmenu ul li a {
+            color: white;
+            font-weight: 200;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+        }
+
+        #smallmenu ul li a:hover {
+            background-color: #524f4f;
+            color: rgb(191, 191, 192);
+        }
+
+        @media screen and (max-width:992px) {
+            #header {
+                display: none;
+            }
+
+            header {
+                flex-direction: row;
+                justify-content: space-between;
+                row-gap: 0px;
+                align-items: center;
+
+            }
+
+            header #navbarforsmalldevice {
+                display: flex;
+                flex-direction: column;
+                align-self: flex-start;
+                align-items: center;
+
+
+            }
+
+            header #navbarforsmalldevice ul {
+                display: flex;
+                list-style: none;
+                flex-direction: column;
+                background-color: #1415158c;
+                /* display: none; */
+                width: 140px;
+
+            }
+
+            header #navbarforsmalldevice ul li a {
+                color: white;
+                display: block;
+                text-decoration: none;
+                padding: 10px 5px;
+
+
+            }
+
+            /* header #navbarforsmalldevice #icon{
+                border:1px solid black;
+
+            } */
+            
+
+            .displayheadercontentflex {
+                font-size: 2.5rem;
+                width: 370px;
+
+            }
+
+        }
+
+        @media screen and (max-width:786px) {
+            .section {
+                width: 49%;
+            }
+
+            .sectionfooter {
+                width: 49%;
+            }
+
+        }
+
+        @media screen and (max-width:576px) {
+            .section {
+                width: 99%;
+            }
+
+            .sectionfooter {
+                width: 99%;
+            }
+
+            .displayheadercontentflex {
+                font-size: 1.8rem;
+                width: 320px;
+
+            }
+            header #navbarforsmalldevice ul
+            {
+                width: 140px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <nav id="header">
+
+
+        <ul>
+
+            <li><a href="">Adventure</a></li>
+            <li><a href="">Cruiser</a></li>
+            <li><a href="">Naked</a></li>
+            <li><a href="">Sportsbike</a></li>
+            <li><a href="">Tourer</a></li>
+            <li><a href="">Sports Tourer</a></li>
+            <li><a href="">Dual Sport</a></li>
+            <li><a href="">Classic</a></li>
+            <li><a href="">Off-road</a></li>
+            <li><a href="">Scooter</a></li>
+        </ul>
+
+        <div id="login">
+            <button> <i class="fa-solid fa-user"></i> Log in</button>
+
+        </div>
+
+
+
+    </nav>
+    <header>
+
+
+
+
+
+        <!-- <div id="logo">
+                <input type="search" placeholder="search">
+                <button>Search</button>
+
+            </div> -->
+
+
+
+
+        <div id="headercontent" class="displaynoneclass">
+
+
+        </div>
+
+        <nav id="navbarforsmalldevice">
+          
+
+            <ul>
+                <li><a href="">Adventure</a></li>
+                <li><a href="">Cruiser</a></li>
+                <li><a href="">Naked</a></li>
+                <li><a href="">Sportsbike</a></li>
+                <li><a href="">Tourer</a></li>
+                <li><a href="">Sports Tourer</a></li>
+                <li><a href="">Dual Sport</a></li>
+                <li><a href="">Classic</a></li>
+                <li><a href="">Off-road</a></li>
+                <li><a href="">Scooter</a></li>
+            </ul>
+        </nav>
+
+
+
+    </header>
+
+    <div id="contentsectionndsidebar">
+
+        <section id="contentsection">
+
+            <div id="section1" class="section">
+                <div id="image1" class="image">
+
+
+                    <h3> adventure</h3>
+
+
+
+                </div>
+                <div class="fordescription">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum molestiae, temporibus labore facere
+                    adipisci eligendi voluptatibus sapiente aliquam, assumenda ullam ipsum a, dolorem animi accusamus!
+                </div>
+
+            </div>
+
+            <div id="section2" class="section">
+                <div id="image2" class="image">
+                    <h3>
+                        Naked
+                    </h3>
+
+
+                </div>
+                <div class="fordescription">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum molestiae, temporibus labore facere
+                    adipisci eligendi voluptatibus sapiente aliquam, assumenda ullam ipsum a, dolorem animi accusamus!
+
+                </div>
+
+            </div>
+
+            <div id="section3" class="section">
+                <div id="image3" class="image">
+                    <h3>sportsbike</h3>
+
+
+                </div>
+                <div class="fordescription">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum molestiae, temporibus labore facere
+                    adipisci eligendi voluptatibus sapiente aliquam, assumenda ullam ipsum a, dolorem animi accusamus!
+                </div>
+
+            </div>
+
+            <div id="section4" class="section">
+                <div id="image4" class="image">
+                    <h3>tourer</h3>
+
+
+                </div>
+                <div class="fordescription">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum molestiae, temporibus labore facere
+                    adipisci eligendi voluptatibus sapiente aliquam, assumenda ullam ipsum a, dolorem animi accusamus!
+                </div>
+
+            </div>
+
+
+            <div id="section5" class="section">
+                <div id="image5" class="image">
+                    <h3>sports tourer</h3>
+
+
+                </div>
+                <div class="fordescription">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum molestiae, temporibus labore facere
+                    adipisci eligendi voluptatibus sapiente aliquam, assumenda ullam ipsum a, dolorem animi accusamus!
+                </div>
+
+            </div>
+
+            <div id="section6" class="section">
+                <div id="image6" class="image">
+                    <h3>sport bike</h3>
+
+
+                </div>
+                <div class="fordescription">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum molestiae, temporibus labore facere
+                    adipisci eligendi voluptatibus sapiente aliquam, assumenda ullam ipsum a, dolorem animi accusamus!
+                </div>
+
+            </div>
+            <div id="section7" class="section">
+                <div id="image7" class="image">
+                    <h3>classic</h3>
+
+
+                </div>
+                <div class="fordescription">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum molestiae, temporibus labore facere
+                    adipisci eligendi voluptatibus sapiente aliquam, assumenda ullam ipsum a, dolorem animi accusamus!
+                </div>
+
+            </div>
+            <div id="section8" class="section">
+                <div id="image8" class="image">
+                    <h3>offroad</h3>
+
+
+                </div>
+                <div class="fordescription">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum molestiae, temporibus labore facere
+                    adipisci eligendi voluptatibus sapiente aliquam, assumenda ullam ipsum a, dolorem animi accusamus!
+                </div>
+
+            </div>
+            <div id="section9" class="section">
+                <div id="image9" class="image">
+                    <h3>scooter</h3>
+
+
+                </div>
+                <div class="fordescription">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum molestiae, temporibus labore facere
+                    adipisci eligendi voluptatibus sapiente aliquam, assumenda ullam ipsum a, dolorem animi accusamus!
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <div id="footersection">
+        <div id="footerinsidemainbox">
+
+            <div id="aboutusection" class="sectionfooter">
+                <h3>About</h3>
+                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus reprehenderit corporis non
+                    iure tempora, expedita, amet maiores ab adipisci quae laudantium accusamus deserunt quia. Id
+                    explicabo numquam non blanditiis tempore.</div>
+            </div>
+            <div id="contactus" class="sectionfooter">
+                <h3>
+                    Contact
+                </h3>
+                <ul>
+                    <li><i class="fa-sharp fa-solid fa-location-dot"></i> Flat no#28,Block no#04,officers colony aiou
+                        h/8 islamabad</li>
+                    <li><i class="fa-solid fa-envelope"></i> mh176316@gmail.com</li>
+                    <li><i class="fa-solid fa-phone"></i> 03155707151</li>
+                    <li><i class="fa-brands fa-skype"></i> live:.cid.4ee1d40eba933700</li>
+                </ul>
+            </div>
+
+            <div id="icons" class="sectionfooter">
+                <h3>Follow us</h3>
+                <ul>
+                    <li><i class="fa-brands fa-facebook-f"></i></li>
+                    <li><i class="fa-brands fa-twitter"></i></li>
+                    <li><i class="fa-brands fa-instagram"></i></li>
+                    <li><i class="fa-brands fa-google"></i></li>
+                    <li><i class="fa-brands fa-linkedin"></i></li>
+                </ul>
+            </div>
+
+            <div id="smallmenu">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About us</a></li>
+                    <li><a href="">Contact us</a></li>
+
+                </ul>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+    <script>
+
+        const Building = ["B", "u", "i", "l", "d", "i", "n", "g"]
+        const Bikes = [" B", "i", "k", "e", "s"];
+        const Website = ["  W", "e", "b", "s", "i", "t", "e"]
+        window.addEventListener('load', function () {
+            setTimeout(() => {
+                const headercontent = document.getElementById('headercontent')
+                headercontent.classList.remove('displaynoneclass')
+                headercontent.classList.add('displayheadercontentflex');
+
+
+                console.log(headercontent)
+                setTimeout(() => {
+                    Building.forEach((element, index) => {
+
+                        document.getElementById("headercontent").innerHTML += element
+
+                    });
+                }, 500)
+
+                setTimeout(() => {
+                    Bikes.forEach((element, index) => {
+
+                        document.getElementById("headercontent").innerHTML += element
+
+                    });
+                }, 1000)
+
+                setTimeout(() => {
+                    Website.forEach((element, index) => {
+
+                        document.getElementById("headercontent").innerHTML += element
+
+                    });
+                }, 1500)
+
+                setTimeout(() => {
+                    const button = document.createElement('button');
+                    button.innerText = 'sign up';
+                    headercontent.append(button);
+
+                }, 2000);
+
+
+
+
+
+
+
+
+
+
+            }, 1000)
+        })
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"
+        href="../Bootstrap5 Practice/bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/faf7708005.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* .mainbox
+        {
+            height: 600px;
+            border:1px solid black;
+
+        } */
+
+        div.container_section {
+            height: 550px;
+            background-image: url(images/unsplshd.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50% 100%;
+            background-blend-mode: multiply;
+            background-color: #607d8b;
+            display: flex;
+            justify-content: center;
+            background-attachment: fixed;
+        }
+
+        div.container_section header {
+            display: flex;
+            justify-content: space-between;
+            position: fixed;
+            width: 100%;
+            background-color: white;
+            padding: 0px 34px;
+            align-items: center;
+        }
+
+        div.container_section header div.img img {
+            width: 140px;
+        }
+
+        div.container_section header #menu {
+            list-style: none;
+            display: flex;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        #dropdown {
+            list-style: none;
+            position: absolute;
+            background-color: white;
+            padding: 0;
+            margin: 0;
+        }
+
+        .displaynone {
+            display: none;
+        }
+
+        .displayflex {
+            display: block;
+        }
+
+        div.container_section header #menu li a {
+            color: black;
+            text-decoration: none;
+            padding: 10px 30px;
+            display: block;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-family: Raleway;
+            position: relative;
+
+        }
+
+
+        div.container_section header #menu li a:hover {
+            background-color: #607d8b;
+            color: black;
+        }
+
+        div.container_section header div.btnclass button {
+            background-color: #b7b7b714;
+            cursor: pointer;
+            color: black;
+            font-size: 16px;
+            border: none;
+            padding: 10px 27px;
+            font-weight: 600;
+            font-family: Raleway;
+        }
+
+        div.container_section header div#icon {
+            font-size: 1.5rem;
+            padding: 1px 15px;
+            display: none;
+
+        }
+
+        div.container_section header div.smallmenu {
+            width: 100%;
+        }
+
+        div.container_section header div.smallmenu #smallnavbar {
+            list-style: none;
+            padding: 0px;
+            margin: 0px;
+            background-color: #404040d9;
+        }
+
+
+        div.container_section header div.smallmenu #smallnavbar li a {
+            display: flex;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            padding: 5px 0px;
+            text-transform: uppercase;
+            border-bottom: 1px solid white;
+
+        }
+
+        div.container_section header div.smallmenu #smallnavbar li a i {
+            display: block;
+            padding: 3px 5px;
+        }
+
+        div.container_section header div.smallmenu #smallnavbar li #smalldropdown {
+            list-style: none;
+            padding: 0px;
+            margin: 0px;
+
+        }
+
+        div.container_section div.container_heading_after_header_section {
+
+            width: 768px;
+            max-width: 100%;
+            color: white;
+            align-self: center;
+            /* border:1px solid black; */
+        }
+
+        div.container_section div.container_heading_after_header_section h3 {
+
+            padding: 10px 0px;
+            font-size: 3.5rem;
+            font-weight: 400;
+            font-family: Raleway;
+        }
+
+        div.container_section div.container_heading_after_header_section p {
+            font-size: larger;
+            font-family: Raleway;
+            margin-bottom: 0.5rem;
+        }
+
+        div.container_section div.container_heading_after_header_section input[type="search"] {
+            width: 60%;
+            padding: 11px 2px;
+            border: none;
+            font-size: 14px;
+            border-radius: 4px;
+
+        }
+
+        div.container_section div.container_heading_after_header_section input[type="search"]::placeholder {
+            font-size: 17px;
+        }
+
+        div.container_section div.container_heading_after_header_section input[type="search"]:focus {
+            outline: none;
+        }
+
+        div.container_section div.container_heading_after_header_section button {
+            padding: 10px 25px;
+            background-color: #0ecdb7a6;
+            border: none;
+            font-size: 15px;
+            font-weight: 600;
+            font-family: inter;
+            color: white;
+            cursor: pointer;
+            border-radius: 4px;
+
+        }
+
+        .container_flex {
+            display: flex;
+            border: 1px solid rgb(255, 0, 0);
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+gap: 5px;
+            margin: 10px auto;
+            width: 1168px;
+            max-width: 100%;
+            
+        }
+
+        .container_flex .items {
+            border: 1px solid black;
+            flex: 300px;
+           
+
+          
+            
+          
+
+        }
+
+        .container_grid {
+            max-width: 1168px;
+            gap: 5px;
+            display: grid;
+            grid-template-columns:repeat(3,1fr);
+            margin: 10px auto;
+            /* gap: 10px; */
+            border: 1px solid rgb(7, 250, 238);
+        }
+
+        .container_grid .items {
+            border: 1px solid black;
+            background: #607d8b;
+            color: black;
+
+        }
+
+        /* .container_grid .items:nth-of-type(1) {
+            background-color: gray;
+            color: white;
+            grid-column: 1/3;
+            grid-row: 1/3;
+        }
+
+
+
+        .container_grid .items:nth-of-type(2) {
+            background-color: silver;
+            grid-column: 3/5;
+            grid-row: 1/4;
+        }
+
+        .container_grid .items:nth-of-type(3) {
+            background: black;
+            color: white;
+            grid-column: 1/3;
+            grid-row: 3/5
+        }
+
+        .container_grid .items:nth-of-type(4) {
+            background-color: brown;
+            grid-column: 3/5;
+            grid-row: 4/6
+        }
+
+        .container_grid .items:nth-of-type(5) {
+            background-color: chocolate;
+            color: white;
+            grid-column: 1/3;
+            grid-row: 5/7;
+        }
+
+        .container_grid .items:nth-of-type(6) {
+            background-color: transparent;
+            grid-column: 3/5;
+            grid-row: 6/10;
+        }
+
+        .container_grid .items:nth-of-type(7) {
+            background-color: teal;
+            color: white;
+            grid-column: 1/3;
+            grid-row: 7/9;
+        }
+
+        .container_grid .items:nth-of-type(8) {
+            background-color: tan;
+            color: #000000;
+            grid-column: 3/5;
+        } */
+
+
+
+
+        @media screen and (min-width:992px) {
+
+            div.container_section header div.smallmenu {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width:992px) {
+
+            div.container_section header #menu,
+            .btnclass {
+                display: none;
+            }
+
+            div.container_section header div#icon {
+                display: block;
+            }
+
+            div.container_section header {
+                flex-wrap: wrap;
+            }
+
+            div.container_section header div#icon {
+                display: block;
+            }
+
+            div.container_section header div#icon i {
+                cursor: pointer;
+            }
+        }
+
+        @media screen and (max-width:768px) {
+            div.container_section div.container_heading_after_header_section {
+                text-align: center;
+            }
+
+            div.contentsection div.cards {
+                flex-basis: 100%;
+            }
+
+            div.container_section div.container_heading_after_header_section h3 {
+                font-size: 2rem;
+            }
+
+            div.container_section div.container_heading_after_header_section p {
+                font-size: medium;
+            }
+
+        }
+
+        @media screen and (max-width:568px) {
+
+            div.container_section div.container_heading_after_header_section h3 {
+                font-size: 1.9rem;
+            }
+
+            div.container_section div.container_heading_after_header_section p {
+                font-size: medium;
+            }
+
+            div.container_section header div.img img {
+                width: 130px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container_section">
+        <header>
+            <div class="img">
+                <img src="./images/computer.jpg" alt="">
+            </div>
+
+            <ul id="menu">
+
+                <li id="services">
+                    <a href="" id="dropdownmenu">Services <i class='fa-solid fa-caret-up'></i>
+                    </a>
+                    <ul id="dropdown" class="displaynone">
+                        <li><a href="">Front end</a></li>
+                        <li><a href="">Back end</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="">About us</a></li>
+                <li><a href="">Contact us</a></li>
+                <li><a href="">Blog</a></li>
+
+            </ul>
+            <div class="btnclass">
+                <button>sign up</button>
+                <button>log in</button>
+            </div>
+            <div id="icon">
+                <i class="fa-solid fa-list" id="list_dropdown"></i>
+
+            </div>
+
+            <div class="smallmenu displaynone">
+                <ul id="smallnavbar">
+                    <li id="smallscreendropdown">
+                        <a href="#" id="servicesmallscreendropdown">Services <i class='fa-solid fa-caret-up'></i></a>
+                        <ul id="smalldropdown" class="displaynone">
+                            <li><a href="">Frond end</a></li>
+                            <li><a href="">Back end</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <div class="container_heading_after_header_section">
+            <h3>Building Beautiful Website</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut obcaecati reiciendis dolore esse commodi
+                architecto voluptate accusamus id dolorem non inventore quia voluptatem itaque rem, quidem quos
+                dicta?
+                Similique, quasi.</p>
+            <input type="search" placeholder="search">
+            <button>Search</button>
+        </div>
+
+
+        <!-- practice of display grid in css -->
+
+
+
+    </div>
+
+    <div class="container_flex">
+        <div class="items">item 1</div>
+        <div class="items">item 2</div>
+        <div class="items">item 3</div>
+        <div class="items">item 4</div>
+        <div class="items">item 5</div>
+        <div class="items">item 6</div>
+    </div>
+
+    <div class="container_grid">
+        <div class="items">item 1</div>
+        <div class="items">item 2</div>
+        <div class="items">item 3</div>
+        <div class="items">item 4</div>
+        <div class="items">item 5</div>
+        <div class="items">item 6</div>
+        <div class="items">item 7</div>
+        <div class="items">item 8</div>
+    </div>
+
+
+
+
+
+
+
+    <script>
+        const services = document.getElementById("services");
+        services.addEventListener('mouseover', function () {
+            const dropdownmenu = document.getElementById('dropdownmenu')
+            dropdownmenu.innerHTML = "Services <i class='fa-solid fa-caret-down'></i>"
+            const dropdown = document.getElementById("dropdown");
+            dropdown.classList.remove('displaynone')
+            dropdown.classList.add('displayflex')
+        })
+        const mouseleave = document.getElementById("services")
+        mouseleave.addEventListener('mouseout', function () {
+            const dropdownmenu = document.getElementById('dropdownmenu')
+            dropdownmenu.innerHTML = "Services <i class='fa-solid fa-caret-up'></i></a>"
+            const dropdown = document.getElementById("dropdown");
+            dropdown.classList.add('displaynone')
+            dropdown.classList.remove('displayflex')
+        })
+
+        let showservices = document.getElementById('smallscreendropdown')
+        showservices.addEventListener('click', function () {
+            const getservice = document.getElementById('servicesmallscreendropdown')
+
+            const servicedropdown = document.getElementById('smalldropdown')
+            const getdisplay = window.getComputedStyle(servicedropdown).display;
+            getdisplay == 'none' ? (servicedropdown.classList.add('displayflex'), getservice.innerHTML = "Services <i class='fa-solid fa-caret-down'></i>") : (servicedropdown.classList.remove('displayflex'), getservice.innerHTML = "Services <i class='fa-solid fa-caret-up'></i>");
+        })
+        const listdropdown = document.getElementById('list_dropdown');
+        listdropdown.addEventListener('click', function () {
+            const smallmenubar = document.querySelectorAll('.smallmenu')
+            console.log(smallmenubar[0])
+            const getdisplay = window.getComputedStyle(smallmenubar[0]).display;
+            getdisplay == 'none' ? smallmenubar[0].classList.add('displayflex') : smallmenubar[0].classList.remove('displayflex')
+        })
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
